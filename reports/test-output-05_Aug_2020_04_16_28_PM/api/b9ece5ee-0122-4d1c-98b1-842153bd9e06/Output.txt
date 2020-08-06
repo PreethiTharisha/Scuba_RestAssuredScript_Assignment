@@ -1,0 +1,30 @@
+Request : POST
+URI : https://sandbox.apihub.citi.com/gcb/api/password/oauth2/token/bh/gcb
+Headers : 
+Authorization=Basic YzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhOnRIOGdUOGdDNmtWMmJSM2hLNm1NNWtMM2RUMmNRNGJKOGlONGVIM25BNndXMmFBN3VK
+uuid=3ea15604-92c6-4472-a96c-d3c99ed578f3
+Accept=application/json
+BizToken=0waND0jxtIy8Xn+TF0F5dCrv17du7A8VS5mmQNQqgfWreqL+RXiKlZ0qLjGYZ0W10nIEpnZOkNE5CcF5B32lMA==
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Params : 
+Response : 
+HTTP/1.1 200 OK
+Headers : 
+X-Backside-Transport=OK OK,OK OK,OK OK
+Server=Apache-Coyote/1.1
+sid=ab1767d7-24ec-4f6a-9f1f-9e28621d6870
+citiuuid=bf45b25d-1953-4626-bd12-57e6e07baeee
+Content-Type=application/json
+X-Global-Transaction-ID=2b7692085f2a8e1cdfae616d
+Access-Control-Expose-Headers=APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID
+Access-Control-Allow-Origin=*
+Access-Control-Allow-Methods=POST
+X-RateLimit-Limit=name=rate-limit-1,60;
+X-RateLimit-Remaining=name=rate-limit-1,59;
+X-Akamai-CITISITE=GTDC
+Content-Length=666
+Date=Wed, 05 Aug 2020 10:46:52 GMT
+Connection=keep-alive
+Set-Cookie=CITI_SITE=gtdc; expires=Wed, 05-Aug-2020 11:06:52 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+Body : 
+{ "token_type":"Bearer", "access_token":"AAIkYzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhtZ_G59_mkkTB1nYDtMFRp6rnRXS3qdhJwikn6U0bxgggcZSbsgk2lr3RshfLcn7o96B_eIuwGxwhqY9I3hcqnwCZQptX777JZArxRsY-m2yNJIw4WIjX0ECtxTXOvH_dihvx7Wz1VyZyD_LtWSxIiacTsmRCL4AGTwLTddICQLF6JTnYJuDpw42g2uL-r_RKQx5nxx_fdLIRWScHik4bcQ", "expires_in":1800, "consented_on":1596624412, "scope":"/api", "refresh_token":"AAKetCHbfxQbVx2PaUEDbvBM-YvXacR2UswaBA2_OyUkTVJGIpbIVn9Ul3CACcIohB3OH9XqMY5X78mH5ZYNsO-4nMa5LO9dEpvSE1AKAoQlRyryIDpZtQqKOaljHKeKlYgd3u3i3CtFSWJa1ELSX5RPgxRrPnu_-DpRgLLN1SHVeJ_bHSeR8V4i1GCLIy0zBD-Ai_-sxw5979uq6P0EerJixZ2OFVqCey7Jp92Vepmofg", "refresh_token_expires_in":2592000 }

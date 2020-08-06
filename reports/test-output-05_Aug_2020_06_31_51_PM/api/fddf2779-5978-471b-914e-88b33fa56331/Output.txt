@@ -1,0 +1,33 @@
+Request : GET
+URI : https://sandbox.apihub.citi.com/gcb/api/v1/accounts
+Headers : 
+accept=application/json
+Authorization=Bearer AAIkYzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBh3nB-Kp6zC4tpKevxRRQneJcHd_ePZHDHYfzvG69NHlLPJDiaySdAEjJnz4ZqeqsOiPRbjevqHDl5_jOCW6u9yZsORCr4j-lhwSQQLPMGUlWNKh82SA8_CGekG-KEIajNbeQ2L67713aoFeMjFUSg6mlUJBXPiHQDy4G4LuawKX6M5jnjmxmEpO_qfvyaArFTtMKjafVV3ZBJJMA8ddFwdA
+uuid=ebc3cd1c-9a6c-4cf9-ade4-e93f479d26cd
+client_id=c9aa2076-1569-4fe6-a902-890041e3ab0a
+Params : 
+Response : 
+HTTP/1.1 200 OK
+Headers : 
+X-Backside-Transport=OK OK,OK OK,OK OK
+uuid=ebc3cd1c-9a6c-4cf9-ade4-e93f479d26cd
+citiuuid=5e0d4e51-7566-4bef-af8f-c5ba67a14a99
+apitimestamp_4=2020-08-05T21:03:10.095+08:00
+apitimestamp_1=2020-08-05T21:03:10.08+08:00
+apitimestamp_2=2020-08-05T21:03:10.094+08:00
+Content-Type=application/json
+X-Global-Transaction-ID=2b7692085f2aae0d9662492f
+Access-Control-Expose-Headers=Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+Access-Control-Allow-Origin=
+Access-Control-Allow-Methods=GET,POST,PUT,DELETE
+Access-Control-Allow-Headers=Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+mfaCode=IX05CqAjgrA7jAkMGB0Vh8RY4xvpIZ%2FM0l%2FPOUeNVd1EzhXKk%2BtW4PLf7q0BpVQQ%2BxM%2FRu9QPv%2FHQMNMQAxbRYW0MWM1qJsLBBwIcKCybGNS15fvjxL2B6LPlNvk8ul6TI5DifNt2MKLH5oocWgbqacvpMUePSwAtGEnYeHaef9hghypyyLZ1i%2B5ZTCFMX6sCfgI5YRqoQV6nv2Dxt0%2BDMhvznvtzSI6HW6wJRT0rJAbJtHFgaqFCqc3ajw3cLtPi1d6dsrmwh5qqVGf0qYcbrYh22KGLynDQICD6K0iDY72DR40chDXasCorUMy0bt9gyB46XmaL653FmjtoNRyL%2FaQMIXJMVjVb7HxschMQGK0IgHdxp9a80%2B0cBS%2FiGLCbeWyv%2BCUYoAZ9t1AJofcu6KTem%2BesjMdDWJr85vClU0%3D
+X-Akamai-CITISITE=GTDC
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Date=Wed, 05 Aug 2020 13:03:10 GMT
+Content-Length=809
+Connection=keep-alive
+Set-Cookie=CITI_SITE=gtdc; expires=Wed, 05-Aug-2020 13:23:10 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+Body : 
+{"accountGroupSummary":[{"accountGroup":"SAVINGS_AND_INVESTMENTS","accounts":[{"savingsAccountSummary":{"productName":"KONTO OSZCZEDNOSCIOWE BHD","productCode":"0007_SSC20","displayAccountNumber":"XXXXXX7556","accountId":"63345745333946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533513d","currencyCode":"BHD","accountClassification":"ASSET","accountStatus":"ACTIVE","currentBalance":2582.18,"availableBalance":2582.18}},{"savingsAccountSummary":{"productName":"KONTO OSZCZEDNOSCIOWE BHD","productCode":"0007_SSC20","displayAccountNumber":"XXXXXX7557","accountId":"809433290433946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533664d","currencyCode":"BHD","accountClassification":"ASSET","accountStatus":"ACTIVE","currentBalance":4582.18,"availableBalance":4582.18}}]},{"accountGroup":"CHECKING","accounts":[{"checkingAccountSummary":{"productName":"SUB. WALUTOWE CITIGOLD USD","productCode":"0001_SAG00","displayAccountNumber":"XXXXXX3260","accountId":"4556622f58466e6e4d67717537337969422b746c66646a6865484d7470736d683436393178494c2b3563566d","currencyCode":"USD","accountClassification":"ASSET","accountStatus":"ACTIVE","currentBalance":91352.21,"availableBalance":91352.21}}]},{"accountGroup":"CREDIT_CARD","accounts":[{"creditCardAccountSummary":{"productName":"CITIBANK VISA PLATINUM","productCode":"0004_VC400","displayAccountNumber":"XXXXXXXXXXXX2875","accountId":"743552522b34655255764b546638573230424439313956744f4a69414b71584e6a764a654e5272762b44633d","currencyCode":"BHD","accountClassification":"LIABILITY","accountStatus":"ACTIVE","outstandingBalance":950,"availableCredit":950,"creditLimit":5400,"minimumDueAmount":500,"paymentDueDate":"2016-09-25","alternateCurrency":"GBP","alternateCurrencyCurrentBalance":0,"cardHolderType":"PRIMARY"}},{"creditCardAccountSummary":{"productName":"CITIBANK VISA PLATINUM","productCode":"0004_VC400","displayAccountNumber":"XXXXXX5753","accountId":"75334a554163504f696b485862753135706a3571764332357441476832723073705a647469497372776f544d","currencyCode":"BHD","accountClassification":"LIABILITY","accountStatus":"ACTIVE","outstandingBalance":3045.87,"availableCredit":3045.87,"creditLimit":10300,"minimumDueAmount":150,"paymentDueDate":"2017-07-07","alternateCurrency":"GBP","alternateCurrencyCurrentBalance":0,"cardHolderType":"SUPPLEMENTARY"}}]}]}

@@ -1,0 +1,17 @@
+Request : GET
+URI : https://sandbox.apihub.citi.com/gcb/api%2F%2Fv1/accounts
+Headers : 
+Authorization=Bearer AAIkYzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhUb3wP6AsRnZxjFSLlUmHpSgmips8drEahDwI8ZSiOKrJAXKLa2SkrkPyG2VEbJg586XhIPqYs3RzMYK3Ll3LWiMr9cLRzH9foeXE9zUbrwHK1FDPwuMC5DJP-ZIjUZkKcYuf1bmseP0wxJR70FhLOVHq-FWo8-dDyBr9RNKnr55H-P1sLMIjchYi7fGyW_SrL6Y-yqe042-pQDWUC87epg
+Accept=application/json
+uuid=d7ae2cfe-6045-48b7-bcc4-f6a8fe80d901
+client_id=c9aa2076-1569-4fe6-a902-890041e3ab0a
+Params : 
+Response : 
+HTTP/1.1 500 Internal Server Error
+Headers : 
+Content-Type=text/plain
+X-Backside-Transport=FAIL FAIL
+Date=Thu, 06 Aug 2020 06:35:26 GMT
+Connection=close
+Body : 
+{'type':'Internal','code':'500','details':'Server Error'}

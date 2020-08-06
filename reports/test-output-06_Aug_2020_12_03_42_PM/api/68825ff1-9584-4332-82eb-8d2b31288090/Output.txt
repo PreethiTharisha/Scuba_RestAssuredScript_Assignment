@@ -1,0 +1,49 @@
+Request : POST
+URI : https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/us/gcb
+Headers : 
+Authorization=Basic YzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhOnRIOGdUOGdDNmtWMmJSM2hLNm1NNWtMM2RUMmNRNGJKOGlONGVIM25BNndXMmFBN3VK
+uuid=d01bde29-79a6-4b10-9bd4-9f1b69ce2d29
+Accept=application/json
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Params : 
+Response : 
+HTTP/1.1 200 OK
+Headers : 
+X-Backside-Transport=OK OK,OK OK,OK OK
+Content-Type=application/json
+X-Global-Transaction-ID=126374ce5f2ba4d4c4f5e155
+Accept=application/json
+uuid=d01bde29-79a6-4b10-9bd4-9f1b69ce2d29
+X-Akamai-CONFIG-LOG-DETAIL=true
+Akamai-Origin-Hop=1
+X-Forwarded-For=157.49.162.80
+X-Akamai-True-Client-IP=157.49.162.80
+Pragma=no-cache
+Cache-Control=no-cache, max-age=0
+X-DataStream-Session-Id=55e4d685-5f2ba4d4-4fdae4bd
+X_AK_SHAPE_AGGREGATOR_IP=FALSE
+X-Client-IP=49.44.113.127,169.175.115.126,153.40.245.129
+dmz-global-txn-id=126374ce5f2ba4d4c4f5e155
+X-Archived-Client-IP=49.44.113.127,49.44.113.127,169.175.115.126
+countryCode=US
+businessCode=GCB
+scope=/api
+channelId=INTERNET
+client_id=c9aa2076-1569-4fe6-a902-890041e3ab0a,c9aa2076-1569-4fe6-a902-890041e3ab0a
+client_secret=tH8gT8gC6kV2bR3hK6mM5kL3dT2cQ4bJ8iN4eH3nA6wW2aA7uJ
+Access-Control-Expose-Headers=APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID
+Access-Control-Allow-Origin=*
+Access-Control-Allow-Methods=POST
+X-RateLimit-Limit=name=rate-limit-1,60;
+X-RateLimit-Remaining=name=rate-limit-1,59;
+Authorization=Basic YzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhOnRIOGdUOGdDNmtWMmJSM2hLNm1NNWtMM2RUMmNRNGJKOGlONGVIM25BNndXMmFBN3VK
+Content-Type=application/json
+X-Akamai-CITISITE=GTDC
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Date=Thu, 06 Aug 2020 06:36:04 GMT
+Content-Length=346
+Connection=keep-alive
+Set-Cookie=CITI_SITE=gtdc; expires=Thu, 06-Aug-2020 06:56:04 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+Body : 
+{ "token_type":"Bearer", "access_token":"AAIkYzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhkDta-Agso5EUGF-QqqGVUeW8jcWsgsppoqlP_fJHG_OwqKGxfV5j8jEtUDt4ZqbK3sCQdPUgqTiUiBqIOwNmKNI90gYGoyLuo7ZllDtHZ8Cky9NoSImhqR-ucXAHfWkTE87PWhiDM2J2IFLKMjXiw1u5tES_ptcG8wMTwQ3ZlDlk7iuIHWOCQJi1aWRXtzXNgaPpDVPjeHAy9T0NDO6il7aDmRN-hyF_V3Ckv7LSVD4", "expires_in":1800, "consented_on":1596695764, "scope":"/api" }

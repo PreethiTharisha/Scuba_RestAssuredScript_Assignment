@@ -1,0 +1,34 @@
+Request : POST
+URI : https://sandbox.apihub.citi.com/gcb/api/v1/moneyMovement/personalDomesticTransfers/preprocess
+Headers : 
+Authorization=Bearer AAIkYzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhDfqq92a1Iu0rz3Lf6giV02lWRjamH1nfeWH7aUschpW0X2-dQ7OTDp4MeH4aFaO4RRSPs-WeZV9nWpMg7lkMAyQV7aWtOisdqnNSjCn_gTXLOJzKKPUCSd4aaoM08LnvDGfjjAFRnY1opQnvOeAdvW-AsavjvzpJWNRvJnpbApr4tfYelfPivVw3cbZQICNAJPvWULfAUaY5Da-x1LE84A
+Accept=application/json
+uuid=9cf4a8f7-f5a7-452c-8827-dd18b7fbd98e
+Client_id=c9aa2076-1569-4fe6-a902-890041e3ab0a
+Content-Type=application/json; charset=UTF-8
+Params : 
+Response : 
+HTTP/1.1 200 OK
+Headers : 
+X-Backside-Transport=OK OK,OK OK,OK OK
+uuid=9cf4a8f7-f5a7-452c-8827-dd18b7fbd98e
+citiuuid=42b1897b-d0b1-4c81-adc8-848cfbf34dfb
+apitimestamp_4=2020-08-06T14:36:16.828+08:00
+apitimestamp_1=2020-08-06T14:36:16.801+08:00
+apitimestamp_2=2020-08-06T14:36:16.827+08:00
+Content-Type=application/json
+X-Global-Transaction-ID=126374ce5f2ba4e0ccf046bf
+Access-Control-Expose-Headers=Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+Access-Control-Allow-Origin=
+Access-Control-Allow-Methods=GET,POST,PUT,DELETE
+Access-Control-Allow-Headers=Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+mfaCode=jZs%2FD26RN1xgzd2AdcSnEVFHRgVOu0GcpYg79oZzlqqSgqMDPYtJshdZLcnMFKdnBufPRtVI0l32abHk3apv4YTBbf0GGFdwoUYDCjRP1uMblkg%2BwUR2pzxs8iu9tVy8i9rCt9v2MQbsuIdlGc%2FAw%2FpY7eCTSf2%2FwcgCa%2F6OTONEACRsni%2F1%2FJR00inQ9eqlnQ9G7OdUOqmOPTVRvEpXUUFMmH%2BFv2kkHLCBp%2FsX%2B0vaQXCWd1TuloO68NU5V8SNnhNCYLolmY%2B26wo4OcNX1mwyABpeoMZARZGcUxurtRW1AqzuZHdM82Ii63ofDR%2Fgjnj5myDsHmEStMgenuTS9uElPb2tPBIbRJNf7%2FROSq4wm5ldrQ27j7ZpoMjCfsGdi4brKW6lqxrBuKGXjq9QNJjbQq0Jq9MAJ6nm3ypJNJg%3D
+X-Akamai-CITISITE=GTDC
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Date=Thu, 06 Aug 2020 06:36:16 GMT
+Content-Length=209
+Connection=keep-alive
+Set-Cookie=CITI_SITE=gtdc; expires=Thu, 06-Aug-2020 06:56:16 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+Body : 
+{"controlFlowId":"8769063532505072322b4c686a37703767644c695575443944744779325744373249416132537a59396b413d","debitDetails":{"transactionDebitAmount":500,"currencyCode":"BHD"},"creditDetails":{"transactionCreditAmount":500,"currencyCode":"BHD"},"foreignExchangeRate":1,"transactionFee":0,"feeCurrencyCode":"BHD"}

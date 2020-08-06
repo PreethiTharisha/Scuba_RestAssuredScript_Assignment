@@ -1,0 +1,745 @@
+<html>
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">.row{margin-right:0px; margin-left:0px;} .skills{text-align:center;padding-right:20px;line-height:40px;color:white;margin-bottom:2px}.passed{background-color:green}.failed{background-color:#f44336}.skipped{background-color:#808080}.testName{background-color:#406084}.total{background-color:#a7856b}.executionTime{background-color:#e59866}.padding-logs{padding:1cm}body{padding:0;font:14px "Calibri",Lucida Grande;line-height:1.5}.checkbox{padding-left:0;margin-top:-5px}.checkbox label{display:inline-block;position:relative;padding-left:5px}.checkbox label::before{content:"";display:inline-block;position:absolute;width:17px;height:17px;left:0;margin-left:-20px;border:1px solid #7f7fff;border-radius:3px;background-color:#fff;-webkit-transition:border .15s ease-in-out,color .15s ease-in-out;-o-transition:border .15s ease-in-out,color .15s ease-in-out;transition:border .15s ease-in-out,color .15s ease-in-out}.checkbox label::after{display:inline-block;position:absolute;width:16px;height:16px;left:0;top:0;margin-left:-10px;padding-left:3px;padding-top:1px;font-size:11px;color:#555}.checkbox input[type="checkbox"]{opacity:0}.checkbox input[type="checkbox"]:focus+label::before{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.checkbox input[type="checkbox"]:checked+label::after{font-family:"FontAwesome";content:"\f00c";margin-left:-20px}.checkbox input[type="checkbox"]:disabled+label{opacity:.65}.checkbox input[type="checkbox"]:disabled+label::before{background-color:#eee;cursor:not-allowed}.checkbox.checkbox-circle+label::before{border-radius:50%}.checkbox.checkbox-inline{margin-top:0}.checkbox-primary input[type="checkbox"]:checked+label::before{background-color:#428bca;border-color:#428bca}.checkbox-primary input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-danger input[type="checkbox"]:checked+label::before{background-color:#d9534f;border-color:#d9534f}.checkbox-danger input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-info input[type="checkbox"]:checked+label::before{background-color:#5bc0de;border-color:#5bc0de}.checkbox-info input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-warning input[type="checkbox"]:checked+label::before{background-color:#f0ad4e;border-color:#f0ad4e}.checkbox-warning input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-success input[type="checkbox"]:checked+label::before{background-color:#5cb85c;border-color:#5cb85c}.checkbox-success input[type="checkbox"]:checked+label::after{color:#fff}.box{color:black;padding:4px;margin-top:4px;border-bottom:1px double;border-top:1px double;border-left: 1px double;border-right: 1px double;border-color:gray}a{font-color:blue}.red{background:#ffb699}.green{background:#90ee90}.yellow{background:#ff6}.blue{background:#f0e68c}#mainTable{border-collapse:collapse}*{font-family:Tahoma,Calibri Light!important}</style> 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ </head>
+ <body background="screenshots/Background.png">
+  <script language="javascript"> function toggle(id,id2) {      var ele = document.getElementById(id);      var text = document.getElementById(id2);      if(ele.style.display == "block") {            ele.style.display = "none";            text.innerHTML = "[+]";      }      else {            ele.style.display = "block";            text.innerHTML = "[-]";      }}</script>
+  <script type="text/javascript">$('#fails').show();$('#pass').show();$('#skip').show();$(document).ready(function(){$("input:checkbox").change(function() {$.each($('input[type="checkbox"]'), function (key, value) {var inputValue = $(this).attr("value");var ischecked= $(this).is(':checked');if(ischecked){$("." + inputValue).show();}else{$("." + inputValue).hide();}});});});</script>
+  <meta charset="utf-8">
+  <title>Automation Report</title>
+  <style type="text/css">body{margin:5px;} .box{color: black; padding: 4px; margin-top: 4px;  border-bottom: 1px double;  border-top: 1px double; border-color:gray;}.red{ background: #ffb699; }.green{ background: #90EE90; }.yellow{ background: #FFFF66; }.blue{ background: #F0E68C; }#mainTable {border-collapse: collapse;}* {font-family: Tahoma, Calibri Light !important;}</style>
+  <div class="\&quot;row\&quot;">
+   <table border="0" style="width:100%">
+    <tbody>
+     <tr>
+      <td>
+       <table>
+        <tbody>
+         <tr>
+          <td align="left" width="10%"><img style="margin:5px;" src="screenshots/MavericLogo.png" border="2">&nbsp;</td>
+         </tr>
+        </tbody>
+       </table></td>
+      <td align="center"><b>
+        <left>
+         <font style="font-size: 25px;"> Test Application Automation Results </font>
+        </left></b></td>
+      <td>
+       <div name="jenkin_compiler_name" align="right">
+        <table style="background-color:rgba(0, 0, 0, 0);">
+         <tbody>
+          <tr>
+           <td><b>
+             <div id="runCompletedOn" class="label label-danger">
+              Thu Aug 06 12:23:37 IST 2020
+             </div><b></b></b></td>
+          </tr>
+         </tbody>
+        </table>
+       </div></td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="row">
+   <div class="col-xs-3 skills testName ">
+    Environment : <span id="environment">TestNG Suite</span>
+   </div>
+   <div class="col-xs-3 skills total ">
+    Total Test Cases : <span id="totalTestCases">1</span>
+   </div>
+   <div class="col-xs-3 skills passed">
+    Execution Time :<span id="executionTime">00:02:40</span>
+   </div>
+   <div class="col-xs-3 skills executionTime">
+    Browser : <span id="browser">chrome</span>
+   </div>
+   <div class="col-xs-3 skills passed">
+    Passed Test Cases : <span id="passedCount">1</span>
+   </div>
+   <div class="col-xs-3 skills failed">
+    Failed Test Cases :<span id="failedCount">0</span>
+   </div>
+   <div class="col-xs-3 skills testName">
+    Retry Count : 0<span id="retryCount"></span>
+   </div>
+   <div class="col-xs-3 skills total">
+    Groups : <span id="keywords">@api</span>
+   </div>
+  </div>
+  <br>
+  <div class="row">
+   <h4 class="col-xs-12 col-sm-6 pull-left"><b><font color="#24468D">Report Details</font></b></h4>
+   <div class="col-xs-12 col-sm-6">
+    <div style="margin-left: 50%;">
+     <div class="col-xs-4 col-sm-offset-3 col-sm-3 checkbox checkbox-success">
+      <input type="checkbox" id="pass" value="green" name="checkbox" checked><label for="pass">Passed</label>
+     </div>
+     <div class="col-xs-4 col-sm-3 checkbox checkbox-danger">
+      <input type="checkbox" id="fails" value="red" name="checkbox" checked><label for="fails">Failed</label>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="pass" class="blue box padding-logs">
+   Feature : MoneyMovement Test Cases&nbsp;<a style="font-size:13px;vertical-align:2px;" id="MoneyMovement Test Cases_passed_0" href="javascript:toggle('MoneyMovement Test Cases_passed','MoneyMovement Test Cases_passed_0');"> [+]</a><a style="position: absolute;right: 9;color:black;"> Total Scenarios : 11, Passed Scenarios : 11, Failed Scenarios : 0</a>
+   <div id="MoneyMovement Test Cases_passed" style="display: none; background-color: #F0E68C; margin-left: 0.5cm; ">
+    <div class="messages">
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_01223378663" href="javascript:toggle('Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_1223378663','Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_01223378663');"> [+]</a>
+      <div id="Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_1223378663" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step11_passed_01223378641" href="javascript:toggle('step11_passed1223378641','step11_passed_01223378641');"> [+]</a>
+         <div id="step11_passed1223378641" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step12_passed_01223378662" href="javascript:toggle('step12_passed1223378662','step12_passed_01223378662');"> [+]</a>
+         <div id="step12_passed1223378662" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:11 PM : <a target="_blank" href=".//api/2fb3ebd7-dc09-4bb5-9166-a4f7a1a95717/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_01223378666" href="javascript:toggle('Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_1223378666','Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_01223378666');"> [+]</a>
+      <div id="Initiate_the_cardAuth_authorize_API_with_valid_fields_and_verify_the_Expected_Result_passed_1223378666" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step21_passed_01223378664" href="javascript:toggle('step21_passed1223378664','step21_passed_01223378664');"> [+]</a>
+         <div id="step21_passed1223378664" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'loan_authorization' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step22_passed_01223378665" href="javascript:toggle('step22_passed1223378665','step22_passed_01223378665');"> [+]</a>
+         <div id="step22_passed1223378665" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:19 PM : <a target="_blank" href=".//api/f988bbc8-cd9e-4c17-9ccc-443d2c2801af/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786711" href="javascript:toggle('Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786711','Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786711');"> [+]</a>
+      <div id="Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786711" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step31_passed_01223378677" href="javascript:toggle('step31_passed1223378677','step31_passed_01223378677');"> [+]</a>
+         <div id="step31_passed1223378677" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step32_passed_01223378678" href="javascript:toggle('step32_passed1223378678','step32_passed_01223378678');"> [+]</a>
+         <div id="step32_passed1223378678" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:24 PM : <a target="_blank" href=".//api/13b0e123-6418-41e8-9555-a13b58e5372a/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step33_passed_01223378679" href="javascript:toggle('step33_passed1223378679','step33_passed_01223378679');"> [+]</a>
+         <div id="step33_passed1223378679" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:26 PM : <a target="_blank" href=".//api/1c951215-316f-4c2b-b03b-c71e8736ad9b/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step34_passed_012233786710" href="javascript:toggle('step34_passed12233786710','step34_passed_012233786710');"> [+]</a>
+         <div id="step34_passed12233786710" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:27 PM : <a target="_blank" href=".//api/95227e33-c8a3-4dc7-908d-35452023d50c/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786716" href="javascript:toggle('Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786716','Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786716');"> [+]</a>
+      <div id="Initiate_the_Password_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786716" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step41_passed_012233786712" href="javascript:toggle('step41_passed12233786712','step41_passed_012233786712');"> [+]</a>
+         <div id="step41_passed12233786712" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step42_passed_012233786713" href="javascript:toggle('step42_passed12233786713','step42_passed_012233786713');"> [+]</a>
+         <div id="step42_passed12233786713" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:33 PM : <a target="_blank" href=".//api/dfa00ba5-eb98-4eb5-b571-fcd7830f086b/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step43_passed_012233786714" href="javascript:toggle('step43_passed12233786714','step43_passed_012233786714');"> [+]</a>
+         <div id="step43_passed12233786714" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:35 PM : <a target="_blank" href=".//api/8654e3f5-28dc-47a7-ba8b-4c810f560369/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step44_passed_012233786715" href="javascript:toggle('step44_passed12233786715','step44_passed_012233786715');"> [+]</a>
+         <div id="step44_passed12233786715" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:35 PM : <a target="_blank" href=".//api/0255d5d3-2acd-4bf8-8778-fa5cf8da0bb3/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate_the_Account_API_with_valid_fields_and_verify_the_Expected_Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate_the_Account_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786822" href="javascript:toggle('Initiate_the_Account_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786822','Initiate_the_Account_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786822');"> [+]</a>
+      <div id="Initiate_the_Account_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786822" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step51_passed_012233786717" href="javascript:toggle('step51_passed12233786717','step51_passed_012233786717');"> [+]</a>
+         <div id="step51_passed12233786717" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step52_passed_012233786718" href="javascript:toggle('step52_passed12233786718','step52_passed_012233786718');"> [+]</a>
+         <div id="step52_passed12233786718" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:41 PM : <a target="_blank" href=".//api/2686829d-6d3c-4ed0-a7e4-6a66453a57e6/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step53_passed_012233786719" href="javascript:toggle('step53_passed12233786719','step53_passed_012233786719');"> [+]</a>
+         <div id="step53_passed12233786719" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:42 PM : <a target="_blank" href=".//api/5fdd0c8d-c65e-4724-9705-5d506d8a4b80/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step54_passed_012233786820" href="javascript:toggle('step54_passed12233786820','step54_passed_012233786820');"> [+]</a>
+         <div id="step54_passed12233786820" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:43 PM : <a target="_blank" href=".//api/91084b6d-9acb-4bc3-b0fa-82acfdf5e917/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         Then Initiate the Accounts_API '/gcb/api/v1/accounts' to get all the accounts<a style="font-size:13px;vertical-align:2px;" id="step55_passed_012233786821" href="javascript:toggle('step55_passed12233786821','step55_passed_012233786821');"> [+]</a>
+         <div id="step55_passed12233786821" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:44 PM : <a target="_blank" href=".//api/c006ff91-cf87-4505-8f08-8247d80896c9/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate_the_GET_Card_API_with_valid_fields_and_verify_the_Expected_Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate_the_GET_Card_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786929" href="javascript:toggle('Initiate_the_GET_Card_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786929','Initiate_the_GET_Card_API_with_valid_fields_and_verify_the_Expected_Result_passed_012233786929');"> [+]</a>
+      <div id="Initiate_the_GET_Card_API_with_valid_fields_and_verify_the_Expected_Result_passed_12233786929" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step61_passed_012233786823" href="javascript:toggle('step61_passed12233786823','step61_passed_012233786823');"> [+]</a>
+         <div id="step61_passed12233786823" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step62_passed_012233786824" href="javascript:toggle('step62_passed12233786824','step62_passed_012233786824');"> [+]</a>
+         <div id="step62_passed12233786824" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:50 PM : <a target="_blank" href=".//api/26b2425f-ee91-429c-b11e-4cfd844b5031/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step63_passed_012233786825" href="javascript:toggle('step63_passed12233786825','step63_passed_012233786825');"> [+]</a>
+         <div id="step63_passed12233786825" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:52 PM : <a target="_blank" href=".//api/2c1d6129-dddf-41ed-99ff-067b80b63415/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step64_passed_012233786826" href="javascript:toggle('step64_passed12233786826','step64_passed_012233786826');"> [+]</a>
+         <div id="step64_passed12233786826" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:53 PM : <a target="_blank" href=".//api/bdb14d15-8ac3-47ec-8e69-2b17e7f71991/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Accounts_API '/gcb/api/v1/accounts' to get all the accounts<a style="font-size:13px;vertical-align:2px;" id="step65_passed_012233786827" href="javascript:toggle('step65_passed12233786827','step65_passed_012233786827');"> [+]</a>
+         <div id="step65_passed12233786827" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:54 PM : <a target="_blank" href=".//api/1fdd59de-f5b4-4b63-b747-77125ebe27d0/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         Then Initiate the Cards_API '/gcb/api/v1/cards' to get all the cards<a style="font-size:13px;vertical-align:2px;" id="step66_passed_012233786828" href="javascript:toggle('step66_passed12233786828','step66_passed_012233786828');"> [+]</a>
+         <div id="step66_passed12233786828" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:21:55 PM : <a target="_blank" href=".//api/af3e20f2-ce4a-4e5b-8a77-63a435d19542/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate the GET_Transactions API with valid fields and verify the Expected Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate the GET_Transactions API with valid fields and verify the Expected Result_passed_012233786937" href="javascript:toggle('Initiate the GET_Transactions API with valid fields and verify the Expected Result_passed_12233786937','Initiate the GET_Transactions API with valid fields and verify the Expected Result_passed_012233786937');"> [+]</a>
+      <div id="Initiate the GET_Transactions API with valid fields and verify the Expected Result_passed_12233786937" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step71_passed_012233786930" href="javascript:toggle('step71_passed12233786930','step71_passed_012233786930');"> [+]</a>
+         <div id="step71_passed12233786930" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step72_passed_012233786931" href="javascript:toggle('step72_passed12233786931','step72_passed_012233786931');"> [+]</a>
+         <div id="step72_passed12233786931" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:01 PM : <a target="_blank" href=".//api/88c56928-e000-445e-a73d-fe1497a6e9e5/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step73_passed_012233786932" href="javascript:toggle('step73_passed12233786932','step73_passed_012233786932');"> [+]</a>
+         <div id="step73_passed12233786932" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:03 PM : <a target="_blank" href=".//api/ab82c234-0ca3-4770-af00-7449bd20774f/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step74_passed_012233786933" href="javascript:toggle('step74_passed12233786933','step74_passed_012233786933');"> [+]</a>
+         <div id="step74_passed12233786933" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:04 PM : <a target="_blank" href=".//api/f9b9d250-ccd4-4f1f-badb-d591b6a64fe2/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Accounts_API '/gcb/api/v1/accounts' to get all the accounts<a style="font-size:13px;vertical-align:2px;" id="step75_passed_012233786934" href="javascript:toggle('step75_passed12233786934','step75_passed_012233786934');"> [+]</a>
+         <div id="step75_passed12233786934" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:05 PM : <a target="_blank" href=".//api/f2f3d25a-8096-419c-bba3-f151b0597001/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Cards_API '/gcb/api/v1/cards' to get all the cards<a style="font-size:13px;vertical-align:2px;" id="step76_passed_012233786935" href="javascript:toggle('step76_passed12233786935','step76_passed_012233786935');"> [+]</a>
+         <div id="step76_passed12233786935" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:06 PM : <a target="_blank" href=".//api/1bede066-e85d-4ea8-befc-146fa3ed0cae/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         Then Initiate the Transaction_Account_API '/gcb/api//v1/accounts/transactions' and get the accountid and transaction status<a style="font-size:13px;vertical-align:2px;" id="step77_passed_012233786936" href="javascript:toggle('step77_passed12233786936','step77_passed_012233786936');"> [+]</a>
+         <div id="step77_passed12233786936" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:07 PM : <a target="_blank" href=".//api/c5253eab-e895-4d32-9921-f81a41767765/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787046" href="javascript:toggle('Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787046','Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787046');"> [+]</a>
+      <div id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787046" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step81_passed_012233786938" href="javascript:toggle('step81_passed12233786938','step81_passed_012233786938');"> [+]</a>
+         <div id="step81_passed12233786938" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step82_passed_012233786939" href="javascript:toggle('step82_passed12233786939','step82_passed_012233786939');"> [+]</a>
+         <div id="step82_passed12233786939" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:16 PM : <a target="_blank" href=".//api/a46b37fe-c984-45f4-bca7-11ba20a68567/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step83_passed_012233787040" href="javascript:toggle('step83_passed12233787040','step83_passed_012233787040');"> [+]</a>
+         <div id="step83_passed12233787040" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:18 PM : <a target="_blank" href=".//api/cf22337b-4bb2-47c6-85c4-141bbc18c2b0/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step84_passed_012233787041" href="javascript:toggle('step84_passed12233787041','step84_passed_012233787041');"> [+]</a>
+         <div id="step84_passed12233787041" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:19 PM : <a target="_blank" href=".//api/a23fd0d2-90f6-4d7b-ac35-dd0c6e35196f/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Accounts_API '/gcb/api/v1/accounts' to get all the accounts<a style="font-size:13px;vertical-align:2px;" id="step85_passed_012233787042" href="javascript:toggle('step85_passed12233787042','step85_passed_012233787042');"> [+]</a>
+         <div id="step85_passed12233787042" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:20 PM : <a target="_blank" href=".//api/a0031f29-5d5e-432c-845d-603aa811a023/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Cards_API '/gcb/api/v1/cards' to get all the cards<a style="font-size:13px;vertical-align:2px;" id="step86_passed_012233787043" href="javascript:toggle('step86_passed12233787043','step86_passed_012233787043');"> [+]</a>
+         <div id="step86_passed12233787043" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:21 PM : <a target="_blank" href=".//api/6f1f243f-bcec-4074-a4dc-dd5691c67392/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Transaction_Account_API '/gcb/api//v1/accounts/transactions' and get the accountid and transaction status<a style="font-size:13px;vertical-align:2px;" id="step87_passed_012233787044" href="javascript:toggle('step87_passed12233787044','step87_passed_012233787044');"> [+]</a>
+         <div id="step87_passed12233787044" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:22 PM : <a target="_blank" href=".//api/dc4f7295-a4d7-4ff9-8de8-894b24ffa0a8/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         Then Initiate the PDT_Eligibility_API '/gcb/api//v1/accounts' and verify the expected result<a style="font-size:13px;vertical-align:2px;" id="step88_passed_012233787045" href="javascript:toggle('step88_passed12233787045','step88_passed_012233787045');"> [+]</a>
+         <div id="step88_passed12233787045" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:23 PM : <a target="_blank" href=".//api/cc12cb17-1571-4ba7-9319-006edd2651c4/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:24 PM : <a target="_blank" href=".//api/4a17ee0e-950d-4255-b49a-629423ae60e5/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:25 PM : <a target="_blank" href=".//api/9617e302-95df-45b1-b5f1-e624a8775631/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:26 PM : <a target="_blank" href=".//api/2e33d717-8228-4a86-b6ab-7dc60a17ea9c/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:27 PM : <a target="_blank" href=".//api/3071d0a1-0055-4ca7-8b9c-c23642feed54/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:28 PM : <a target="_blank" href=".//api/4cdfae12-b18c-4b30-b951-8d9cc3a8ffd0/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787155" href="javascript:toggle('Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787155','Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787155');"> [+]</a>
+      <div id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787155" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step91_passed_012233787047" href="javascript:toggle('step91_passed12233787047','step91_passed_012233787047');"> [+]</a>
+         <div id="step91_passed12233787047" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step92_passed_012233787048" href="javascript:toggle('step92_passed12233787048','step92_passed_012233787048');"> [+]</a>
+         <div id="step92_passed12233787048" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:34 PM : <a target="_blank" href=".//api/5f3fe833-fb04-4aa1-81a8-9b9e223cac3e/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step93_passed_012233787049" href="javascript:toggle('step93_passed12233787049','step93_passed_012233787049');"> [+]</a>
+         <div id="step93_passed12233787049" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:35 PM : <a target="_blank" href=".//api/92227c44-8702-4bec-a988-1111195d966e/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step94_passed_012233787050" href="javascript:toggle('step94_passed12233787050','step94_passed_012233787050');"> [+]</a>
+         <div id="step94_passed12233787050" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:36 PM : <a target="_blank" href=".//api/3e2022d8-f152-446e-a8fc-d891eaf878fc/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Accounts_API '/gcb/api/v1/accounts' to get all the accounts<a style="font-size:13px;vertical-align:2px;" id="step95_passed_012233787051" href="javascript:toggle('step95_passed12233787051','step95_passed_012233787051');"> [+]</a>
+         <div id="step95_passed12233787051" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:37 PM : <a target="_blank" href=".//api/8921d10a-5517-4fe2-871a-e5083ce7d7db/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Cards_API '/gcb/api/v1/cards' to get all the cards<a style="font-size:13px;vertical-align:2px;" id="step96_passed_012233787052" href="javascript:toggle('step96_passed12233787052','step96_passed_012233787052');"> [+]</a>
+         <div id="step96_passed12233787052" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:38 PM : <a target="_blank" href=".//api/08db1da7-aa73-492f-ba35-615c5e6530cc/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Transaction_Account_API '/gcb/api//v1/accounts/transactions' and get the accountid and transaction status<a style="font-size:13px;vertical-align:2px;" id="step97_passed_012233787153" href="javascript:toggle('step97_passed12233787153','step97_passed_012233787153');"> [+]</a>
+         <div id="step97_passed12233787153" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:39 PM : <a target="_blank" href=".//api/dff277a0-9a71-4c7d-bd50-546977d40b8e/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         Then Initiate the PDT_Eligibility_API '/gcb/api//v1/accounts' and verify the expected result<a style="font-size:13px;vertical-align:2px;" id="step98_passed_012233787154" href="javascript:toggle('step98_passed12233787154','step98_passed_012233787154');"> [+]</a>
+         <div id="step98_passed12233787154" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:40 PM : <a target="_blank" href=".//api/2ae625d9-3965-48bd-941e-4c34f3ad3727/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:41 PM : <a target="_blank" href=".//api/80aa4793-f350-45f4-8dbc-15494324296e/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:42 PM : <a target="_blank" href=".//api/05e2ea0c-54ec-4ace-b488-d3c8936fdb83/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:43 PM : <a target="_blank" href=".//api/8a65033a-65d3-4b7f-87b1-d72eebaaff75/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:43 PM : <a target="_blank" href=".//api/ae8d0fdc-5cc4-41a6-95ad-e3939a1c41c9/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:22:45 PM : <a target="_blank" href=".//api/47e7e3e7-bcc5-4044-a43c-fd1942435dab/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787165" href="javascript:toggle('Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787165','Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787165');"> [+]</a>
+      <div id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787165" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step101_passed_012233787156" href="javascript:toggle('step101_passed12233787156','step101_passed_012233787156');"> [+]</a>
+         <div id="step101_passed12233787156" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step102_passed_012233787157" href="javascript:toggle('step102_passed12233787157','step102_passed_012233787157');"> [+]</a>
+         <div id="step102_passed12233787157" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:52 PM : <a target="_blank" href=".//api/733542d3-2dbf-4eb9-98a6-32ed73f72556/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step103_passed_012233787158" href="javascript:toggle('step103_passed12233787158','step103_passed_012233787158');"> [+]</a>
+         <div id="step103_passed12233787158" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:53 PM : <a target="_blank" href=".//api/c1783c5a-02ba-4478-9bc4-d8f8fec4e314/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step104_passed_012233787159" href="javascript:toggle('step104_passed12233787159','step104_passed_012233787159');"> [+]</a>
+         <div id="step104_passed12233787159" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:55 PM : <a target="_blank" href=".//api/ab7f75ee-ed3b-4fc4-b3fd-50af2d31549f/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Accounts_API '/gcb/api/v1/accounts' to get all the accounts<a style="font-size:13px;vertical-align:2px;" id="step105_passed_012233787160" href="javascript:toggle('step105_passed12233787160','step105_passed_012233787160');"> [+]</a>
+         <div id="step105_passed12233787160" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:55 PM : <a target="_blank" href=".//api/d6d7a151-628f-4ef7-8f0e-5479b31a4cc3/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Cards_API '/gcb/api/v1/cards' to get all the cards<a style="font-size:13px;vertical-align:2px;" id="step106_passed_012233787161" href="javascript:toggle('step106_passed12233787161','step106_passed_012233787161');"> [+]</a>
+         <div id="step106_passed12233787161" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:56 PM : <a target="_blank" href=".//api/289a5907-c2bc-4e3a-b007-a0d0917fe320/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Transaction_Account_API '/gcb/api//v1/accounts/transactions' and get the accountid and transaction status<a style="font-size:13px;vertical-align:2px;" id="step107_passed_012233787162" href="javascript:toggle('step107_passed12233787162','step107_passed_012233787162');"> [+]</a>
+         <div id="step107_passed12233787162" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:57 PM : <a target="_blank" href=".//api/39173eba-d1b7-40df-9cf9-471347255315/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the PDT_Eligibility_API '/gcb/api//v1/accounts' and verify the expected result<a style="font-size:13px;vertical-align:2px;" id="step108_passed_012233787163" href="javascript:toggle('step108_passed12233787163','step108_passed_012233787163');"> [+]</a>
+         <div id="step108_passed12233787163" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:22:58 PM : <a target="_blank" href=".//api/2e2ef0da-335e-4ba2-84d0-b883954934f3/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:00 PM : <a target="_blank" href=".//api/0816e37a-7a4c-473f-acd6-07303ebefb4b/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:00 PM : <a target="_blank" href=".//api/17c2b2d9-800a-45ca-904b-7ef490131ff4/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:01 PM : <a target="_blank" href=".//api/03678787-79d9-40ae-ac4c-5eda3fa41c45/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:02 PM : <a target="_blank" href=".//api/1c625093-df4d-4149-abc6-ad7c35f3f4aa/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:03 PM : <a target="_blank" href=".//api/7a196352-926f-45ce-8e8e-6684e34aa0ce/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         Then Initiate the PDT-PreProcess API '/gcb/api/v1/moneyMovement/personalDomesticTransfers/preprocess' with valid fields and verify the Expected Result<a style="font-size:13px;vertical-align:2px;" id="step109_passed_012233787164" href="javascript:toggle('step109_passed12233787164','step109_passed_012233787164');"> [+]</a>
+         <div id="step109_passed12233787164" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:04 PM : <a target="_blank" href=".//api/97a77bcd-745c-412d-bacb-732d17c91298/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="pass" class="green box padding-logs">
+      Scenario : Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787376" href="javascript:toggle('Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787376','Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_012233787376');"> [+]</a>
+      <div id="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result_passed_12233787376" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+       <div class="messages">
+        <div id="pass" class="green box padding-logs">
+         Given Initiate the setup required<a style="font-size:13px;vertical-align:2px;" id="step111_passed_012233787166" href="javascript:toggle('step111_passed12233787166','step111_passed_012233787166');"> [+]</a>
+         <div id="step111_passed12233787166" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         When Initiate the Client_Credentials_API 'client_credentials' '/api' and '/gcb/api/clientCredentials/oauth2/token/us/gcb' get the accessToken<a style="font-size:13px;vertical-align:2px;" id="step112_passed_012233787267" href="javascript:toggle('step112_passed12233787267','step112_passed_012233787267');"> [+]</a>
+         <div id="step112_passed12233787267" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:10 PM : <a target="_blank" href=".//api/e4ad438f-38ac-4589-ae50-318c6c764992/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the EtoEkey_API '/gcb/api/security/e2eKey' and get the Biz_token<a style="font-size:13px;vertical-align:2px;" id="step113_passed_012233787268" href="javascript:toggle('step113_passed12233787268','step113_passed_012233787268');"> [+]</a>
+         <div id="step113_passed12233787268" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:14 PM : <a target="_blank" href=".//api/957d45f1-0fed-492e-8bd6-8f7323e15fb4/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Resource_Owner 'SandboxUser1' '967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600' and '/gcb/api/password/oauth2/token/bh/gcb' get the encrypted password<a style="font-size:13px;vertical-align:2px;" id="step114_passed_012233787269" href="javascript:toggle('step114_passed12233787269','step114_passed_012233787269');"> [+]</a>
+         <div id="step114_passed12233787269" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:15 PM : <a target="_blank" href=".//api/e0e4bcea-9dfa-4669-81d6-e13dbc9607d6/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Accounts_API '/gcb/api/v1/accounts' to get all the accounts<a style="font-size:13px;vertical-align:2px;" id="step115_passed_012233787270" href="javascript:toggle('step115_passed12233787270','step115_passed_012233787270');"> [+]</a>
+         <div id="step115_passed12233787270" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:16 PM : <a target="_blank" href=".//api/2b9ae780-9d74-4c24-87dc-8ce9003ff035/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Cards_API '/gcb/api/v1/cards' to get all the cards<a style="font-size:13px;vertical-align:2px;" id="step116_passed_012233787271" href="javascript:toggle('step116_passed12233787271','step116_passed_012233787271');"> [+]</a>
+         <div id="step116_passed12233787271" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:17 PM : <a target="_blank" href=".//api/d6d88c29-a175-472c-94e0-fac4364b8461/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the Transaction_Account_API '/gcb/api//v1/accounts/transactions' and get the accountid and transaction status<a style="font-size:13px;vertical-align:2px;" id="step117_passed_012233787272" href="javascript:toggle('step117_passed12233787272','step117_passed_012233787272');"> [+]</a>
+         <div id="step117_passed12233787272" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:18 PM : <a target="_blank" href=".//api/2e491917-7453-4fc4-9903-2579bdd6a471/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the PDT_Eligibility_API '/gcb/api//v1/accounts' and verify the expected result<a style="font-size:13px;vertical-align:2px;" id="step118_passed_012233787373" href="javascript:toggle('step118_passed12233787373','step118_passed_012233787373');"> [+]</a>
+         <div id="step118_passed12233787373" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:19 PM : <a target="_blank" href=".//api/fe70beb9-21bd-4132-a941-482f4a8079d7/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:20 PM : <a target="_blank" href=".//api/099d0907-460a-48b5-945a-90dc896f22d5/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:20 PM : <a target="_blank" href=".//api/82db15cd-24e3-4fe5-b001-3e4601b0bfe4/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:21 PM : <a target="_blank" href=".//api/a2eb8ba9-d13f-4769-b6ad-128ae5de8840/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:33 PM : <a target="_blank" href=".//api/08db68d5-c451-4091-b042-c06edaf2134b/Output.txt">API Call</a>
+           <br>06-Aug-2020 12:23:34 PM : <a target="_blank" href=".//api/1b7fddbc-d56d-40f6-9b84-ae83e48a1a45/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         And Initiate the PDT-PreProcess API '/gcb/api/v1/moneyMovement/personalDomesticTransfers/preprocess' with valid fields and verify the Expected Result<a style="font-size:13px;vertical-align:2px;" id="step119_passed_012233787374" href="javascript:toggle('step119_passed12233787374','step119_passed_012233787374');"> [+]</a>
+         <div id="step119_passed12233787374" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:35 PM : <a target="_blank" href=".//api/8a0a1ebe-f57e-4ab2-a348-b8a486490f33/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+        <div id="pass" class="green box padding-logs">
+         Then Initiate the PDT-Confirmation API '/gcb/api/v1/moneyMovement/personalDomesticTransfers' with valid fields and verify the Expected Result<a style="font-size:13px;vertical-align:2px;" id="step1110_passed_012233787375" href="javascript:toggle('step1110_passed12233787375','step1110_passed_012233787375');"> [+]</a>
+         <div id="step1110_passed12233787375" style="display: none; background-color: #bdf5bd; margin-left: 0.5cm; ">
+          <div class="messages">
+           06-Aug-2020 12:23:35 PM : <a target="_blank" href=".//api/df6cd5e9-0661-4c03-8d3c-724d0be8e0e0/Output.txt">API Call</a>
+           <br>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

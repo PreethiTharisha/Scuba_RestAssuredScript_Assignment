@@ -1,0 +1,17 @@
+Request : POST
+URI : https://sandbox.apihub.citi.com/Cmethod
+Headers : 
+Authorization=Basic YzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBhOnRIOGdUOGdDNmtWMmJSM2hLNm1NNWtMM2RUMmNRNGJKOGlONGVIM25BNndXMmFBN3VK
+uuid=363a10d8-0900-48d4-b5a9-5677ab60644a
+Accept=application/json
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Params : 
+Response : 
+HTTP/1.1 500 Internal Server Error
+Headers : 
+Content-Type=text/plain
+X-Backside-Transport=FAIL FAIL
+Date=Thu, 06 Aug 2020 06:19:59 GMT
+Connection=close
+Body : 
+{'type':'Internal','code':'500','details':'Server Error'}

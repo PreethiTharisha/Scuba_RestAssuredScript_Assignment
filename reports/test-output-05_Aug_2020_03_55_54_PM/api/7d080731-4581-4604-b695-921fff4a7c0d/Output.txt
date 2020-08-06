@@ -1,0 +1,19 @@
+Request : GET
+URI : https://sandbox.apihub.citi.com/gcb/api%2F%2Fv1/accounts/809433290433946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533664d/transactions?transactionStatus=POSTED
+Headers : 
+Authorization=Bearer AAIkYzlhYTIwNzYtMTU2OS00ZmU2LWE5MDItODkwMDQxZTNhYjBh1MQ55jJ8Ey24DVBF1vZU9R-O2OuWEZrREORiAAbCNY6TpID3r8gyxB3yiX6hq3V5IrDhayeEUbdsv-ifdUqQGHMsvRsMQbXezmhhIFUlLCUyhwafB1Nyc41yJeR0M8nL1EueTO42ZPcffgmjo4_EnAUjWGA4ggXEhi5tyH0CVnimSEkVSwZzlHS-j2pu2gBAhWWee0i8iOiOVBHPUFHJBQ
+Accept=application/json
+uuid=73d3ffc0-ad1f-465c-8d04-dca8a4f4acd9
+client_id=c9aa2076-1569-4fe6-a902-890041e3ab0a
+Params : 
+Response : 
+HTTP/1.1 500 Internal Server Error
+Headers : 
+Content-Type=text/plain
+X-Backside-Transport=FAIL FAIL
+Date=Wed, 05 Aug 2020 10:26:52 GMT
+Transfer-Encoding=chunked
+Connection=keep-alive
+Connection=Transfer-Encoding
+Body : 
+{'type':'Internal','code':'500','details':'Server Error'}
